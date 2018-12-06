@@ -1,13 +1,12 @@
 import {all, fork, select, call, put, takeEvery, getContext} from 'redux-saga/effects';
 import {GET_ORDERS_REQUESTED, GET_ORDERS_FULFILLED} from './actions';
-import {push} from 'redux-little-router';
 
 import EmpaticaService from '../../services/EmpaticaService';
 
-const empaticaService = EmpaticaService.instance;
+export const empaticaService = EmpaticaService.instance;
 
 // attempt to retrieve user orders
-function * retrieveUserOrders({userId}) {
+export function * retrieveUserOrders({userId}) {
   const ordersResult = yield call(empaticaService.getUserOrders, userId);
 
   if (!ordersResult) {

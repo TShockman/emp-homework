@@ -1,0 +1,50 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`OrderList Consistently renders loading component when data has not arrived yet 1`] = `<Loading />`;
+
+exports[`OrderList Consistently renders with non-empty orders list 1`] = `
+<ListGroup
+  tag="ul"
+>
+  <ListGroupItem
+    tag="li"
+  >
+    <OrderPreview
+      order={
+        Object {
+          "id": 123,
+          "items": Array [
+            Object {
+              "amount": 120,
+              "name": "Test Product",
+              "sku": "123-123-123",
+            },
+          ],
+          "ref": "mockref123-456",
+          "status": "ok",
+        }
+      }
+    />
+  </ListGroupItem>
+  <ListGroupItem
+    tag="li"
+  >
+    <OrderPreview
+      order={
+        Object {
+          "id": 456,
+          "items": Array [
+            Object {
+              "amount": 120,
+              "name": "Test Product",
+              "sku": "123-123-123",
+            },
+          ],
+          "ref": "mockref908-765",
+          "status": "ok",
+        }
+      }
+    />
+  </ListGroupItem>
+</ListGroup>
+`;

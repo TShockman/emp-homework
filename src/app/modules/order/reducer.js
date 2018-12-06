@@ -1,4 +1,4 @@
-import {Map} from 'immutable';
+import {Map, fromJS} from 'immutable';
 import {GET_ORDERS_FULFILLED} from './actions';
 
 // order state is a map from user id to list of order

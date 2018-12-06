@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`OrderListContainer Consistently provides OrderList with correct props 1`] = `
+<OrderList
+  id={123}
+  orders={
+    Array [
+      Object {
+        "bogus": "mock data B",
+      },
+    ]
+  }
+  push={[Function]}
+  requestUserOrders={[Function]}
+/>
+`;

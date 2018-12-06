@@ -8,20 +8,18 @@ export default class OrderList extends PureComponent {
   static propTypes = {
     orders: PropTypes.array,
     id: PropTypes.number,
-    router: PropTypes.object.isRequired,
     requestUserOrders: PropTypes.func.isRequired,
     push: PropTypes.func.isRequired
   };
 
   componentDidMount = () => {
-    const {orders, id, router, requestUserOrders, push} = this.props;
-    const {id: routerId} = router.params;
+    const {id, requestUserOrders, push} = this.props;
 
     if (id === null) {
       return push('/login');
-    } else {
-      return requestUserOrders({userId: id});
     }
+
+    return requestUserOrders({userId: id});
   };
 
   render() {

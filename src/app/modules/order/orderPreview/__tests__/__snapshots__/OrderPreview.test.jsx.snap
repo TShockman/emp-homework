@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`OrderPreview Renders consistently with full information 1`] = `
+<div>
+  mockref-asdf1245
+</div>
+`;
