@@ -1,6 +1,8 @@
 var express = require("express");
+var cors = require("cors");
 
 var app = express();
+app.use(cors());
 
 var users = {
   1: {
@@ -94,5 +96,5 @@ app.delete("/orders/:id", function(req, res) {
   });
 });
 
-console.log("Server is starting at localhost:3000");
-app.listen(3000);
+console.log("Server is starting at localhost:3001");
+app.listen(3001);
