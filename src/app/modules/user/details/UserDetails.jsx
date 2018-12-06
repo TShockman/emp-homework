@@ -2,7 +2,7 @@ import React, {PureComponent} from 'react';
 import PropTypes from 'prop-types';
 import {Card} from 'reactstrap';
 import Loading from '../../common/loading/Loading';
-import OrderList from '../orderList';
+import OrderList from '../../order/orderList';
 
 export default class UserDetails extends PureComponent {
   static propTypes = {

@@ -19,21 +19,16 @@ export default class OrderList extends PureComponent {
 
     if (id === null) {
       return push('/login');
-    } else if (id.toString() !== routerId) {
-      console.log('Can only view orders of user logged in.');
-      // TODO: handle this differently?
-      return push(`/user/${id}/orders`);
     } else {
-      return requestUserOrders({id: router.params.id});
+      return requestUserOrders({userId: id});
     }
-  }
+  };
 
   render() {
     const {orders} = this.props;
     if (!orders) {
       return <Loading/>;
     }
-    console.log(orders)
 
     return (
         <ListGroup>
