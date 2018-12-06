@@ -1,0 +1,72 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Login Renders consistently 1`] = `
+<Card
+  tag="div"
+>
+  <Form
+    tag="form"
+  >
+    <FormGroup
+      tag="div"
+    >
+      <Label
+        for="username"
+        tag="label"
+        widths={
+          Array [
+            "xs",
+            "sm",
+            "md",
+            "lg",
+            "xl",
+          ]
+        }
+      >
+        Username
+      </Label>
+      <Input
+        id="username"
+        name="username"
+        onChange={[Function]}
+        placeholder="Jane_Doe"
+        type="text"
+      />
+    </FormGroup>
+    <FormGroup
+      tag="div"
+    >
+      <Label
+        for="password"
+        tag="label"
+        widths={
+          Array [
+            "xs",
+            "sm",
+            "md",
+            "lg",
+            "xl",
+          ]
+        }
+      >
+        Password
+      </Label>
+      <Input
+        id="password"
+        name="password"
+        onChange={[Function]}
+        placeholder="***********"
+        type="password"
+      />
+    </FormGroup>
+    <Button
+      className="btn btn-primary"
+      color="secondary"
+      onClick={[Function]}
+      tag="button"
+    >
+      Login
+    </Button>
+  </Form>
+</Card>
+`;

@@ -5,7 +5,6 @@ import {selectAuthState} from '../selectors';
 
 
 function mapStateToProps(state) {
-  console.log(state)
   const {id} = selectAuthState(state);
   return {
     id

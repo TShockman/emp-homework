@@ -4,10 +4,10 @@ import {push} from 'redux-little-router';
 
 import EmpaticaService from '../../services/EmpaticaService';
 
-const empaticaService = EmpaticaService.instance;
+export const empaticaService = EmpaticaService.instance;
 
 // attempt to login
-function * loginUser({username, password}) {
+export function * loginUser({username, password}) {
   const loginResult = yield call(empaticaService.login, {username, password});
 
   if (!loginResult) {

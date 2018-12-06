@@ -1,0 +1,8 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`LoginContainer Provides Login with correct props 1`] = `
+<Login
+  id={123}
+  requestLogin={[Function]}
+/>
+`;

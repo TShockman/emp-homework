@@ -1,7 +1,7 @@
 import {Record} from 'immutable';
 import {LOGIN_FULFILLED} from './actions';
 
-const AuthState = Record({
+export const AuthState = Record({
   id: null
 });
 
