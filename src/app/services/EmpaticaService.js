@@ -34,4 +34,11 @@ export default class UserService {
     })
         .then(parseResponse);
   }
+
+  getUserOrders(id) {
+    return fetch(`${USER_URL}/${id}/orders`, {
+      method: 'GET'
+    })
+        .then(parseResponse);
+  }
 }

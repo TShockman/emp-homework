@@ -2,7 +2,7 @@ import React, {PureComponent} from 'react';
 import PropTypes from 'prop-types';
 import {Card} from 'reactstrap';
 import Loading from '../../common/loading/Loading';
-import {push} from 'redux-little-router';
+import OrderList from '../orderList';
 
 export default class UserDetails extends PureComponent {
   static propTypes = {
@@ -14,21 +14,21 @@ export default class UserDetails extends PureComponent {
       email: PropTypes.string
     }),
     requestUser: PropTypes.func.isRequired,
-    id: PropTypes.number
+    id: PropTypes.number,
+    push: PropTypes.func.isRequired
   };
 
   componentDidMount = () => {
-    const {requestUser, router, id} = this.props;
+    const {requestUser, router, id, push} = this.props;
     const {id: routeId} = router.params;
-
     if (id === null) {
-      push('/login');
-    } else if (id !== routeId) {
+      return push('/login');
+    } else if (id.toString() !== routeId) {
       console.log('Can only view user logged in.');
       // TODO: handle this differently?
-      push(`/user/${id}`);
+      return push(`/user/${id}`);
     } else {
-      requestUser({id: router.params.id});
+      return requestUser({id: router.params.id});
     }
   };
 
@@ -44,6 +44,7 @@ export default class UserDetails extends PureComponent {
           <h3>{firstName}</h3>
           <h3>{lastName}</h3>
           <h3>{email}</h3>
+          <OrderList router={this.props.router}/>
         </Card>
     );
   }
