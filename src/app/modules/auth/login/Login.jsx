@@ -1,11 +1,10 @@
-import React, {PureComponent} from 'react';
+import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import {Button, Form, FormGroup, Label, Input, Card} from 'reactstrap';
 
-export default class Login extends PureComponent{
+export default class Login extends Component{
   static propTypes = {
     requestLogin: PropTypes.func.isRequired,
-    username: PropTypes.string,
     id: PropTypes.number
   };
 
@@ -36,7 +35,8 @@ export default class Login extends PureComponent{
 
   render() {
     const {id} = this.props;
-    if (id === null) {
+    if (id !== null) {
+      // TODO
       console.log("Will need to redirect to the proper location here.")
     }
 

@@ -1,4 +1,4 @@
-import {LOGIN_URL} from './endpoints';
+import {LOGIN_URL, USER_URL} from './endpoints';
 import {parseResponse} from './utils';
 
 const _singleton = Symbol();
@@ -24,6 +24,13 @@ export default class UserService {
         'Content-Type': 'application/json'
       },
       body: JSON.stringify(user)
+    })
+        .then(parseResponse);
+  }
+
+  getUser(id) {
+    return fetch(`${USER_URL}/${id}`, {
+      method: 'GET'
     })
         .then(parseResponse);
   }

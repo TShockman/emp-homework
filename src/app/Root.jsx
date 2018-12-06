@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import {Provider} from 'react-redux';
-import NotFound from "./modules/notFound";
+import NotFound from "./modules/common/notFound";
 import connect from "react-redux/es/connect/connect";
 
 // Automatically render the component specified for this route based on
