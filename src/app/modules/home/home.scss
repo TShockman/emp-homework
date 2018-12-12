@@ -1,0 +1,64 @@
+@import '../../../common';
+
+#homepage{
+  .container {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    max-width: 100%;
+
+    // mobile default
+    background: url('../../../assets/images/homepage_hero-sm-xhdpi.jpg') no-repeat;
+    background-position: right 20%;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+
+  @media (min-width: $EMP-full-min) {
+    .container {
+      background-image: url('../../../assets/images/homepage_hero-lg-xhdpi.jpg');
+    }
+  }
+
+  text-align: center;
+  background: transparent;
+  width: 100%;
+
+
+  .row {
+    margin: 0;
+    width: 100%;
+  }
+
+  .titleRow {
+    color: $EMP-white;
+    height: 700px;
+    padding-top: 320px;
+    text-align: left;
+    width: 60%;
+
+    button {
+      background: transparent;
+      color: $EMP-white;
+      border-color: $EMP-white;
+      border-radius: 5px;
+      border-width: 2px;
+      width: 350px;
+      -webkit-transition-duration: 0.4s; /* Safari */
+      transition-duration: 0.4s;
+    }
+
+    button:hover {
+      background-color: $EMP-white;
+      color: $EMP-dark-grey;
+    }
+  }
+
+  .infoRow {
+    background: $EMP-white;
+    width: 100%;
+  }
+}
+

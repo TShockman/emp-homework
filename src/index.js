@@ -1,11 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.scss';
 import Root from './app/Root';
 import {initializeCurrentLocation} from "redux-little-router";
 import {createStore} from './app/store';
 import * as serviceWorker from './serviceWorker';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import './index.scss';
 
 
 const store = createStore();
