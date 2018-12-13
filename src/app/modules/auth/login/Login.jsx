@@ -1,6 +1,8 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
-import {Button, Form, FormGroup, Label, Input, Card} from 'reactstrap';
+import cx from 'classnames';
+import {Link} from 'redux-little-router';
+import style from './login.scss';
 
 export default class Login extends Component{
   static propTypes = {
@@ -24,6 +26,7 @@ export default class Login extends Component{
 
   handleSubmit = event => {
     event.stopPropagation();
+    event.preventDefault();
     const {requestLogin} = this.props;
     const {username, password} = this.state;
 
@@ -41,19 +44,31 @@ export default class Login extends Component{
     }
 
     return (
-        <Card>
-          <Form>
-            <FormGroup>
-              <Label for="username">Username</Label>
-              <Input onChange={this.handleFormUpdate} id="username" name="username" placeholder="Jane_Doe"/>
-            </FormGroup>
-            <FormGroup>
-              <Label for="password">Password</Label>
-              <Input onChange={this.handleFormUpdate} id="password" name="password" type="password" placeholder="***********"/>
-            </FormGroup>
-            <Button className="btn btn-primary" onClick={this.handleSubmit}>Login</Button>
-          </Form>
-        </Card>
+        <div className={cx("container-fluid", "login")}>
+          <div className="row">
+            <div className="col">
+              <form className="card" onSubmit={this.handleSubmit}>
+                <h2>Login</h2>
+                <div className="form-group">
+                  <label htmlFor="username">Username</label>
+                  <input className="form-control" onChange={this.handleFormUpdate} id="username" name="username" placeholder="Jane_Doe"/>
+                </div>
+                <div className="form-group">
+                  <label htmlFor="password">Password</label>
+                  <input className="form-control" onChange={this.handleFormUpdate} id="password" name="password" type="password" placeholder="***********"/>
+                </div>
+                <button type="submit">Login</button>
+              </form>
+            </div>
+          </div>
+          <div className="row">
+            <div className="col">
+              <div className="card">
+                <span>Don't have an account? <Link href="#">Sign Up</Link></span>
+              </div>
+            </div>
+          </div>
+        </div>
     );
   }
 }
