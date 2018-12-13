@@ -1,7 +1,108 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Home Renders consistently 1`] = `
-<div>
-  Homepage!
+<div
+  id="homepage"
+>
+  <div
+    className="container"
+  >
+    <div
+      className="row titleRow"
+    >
+      <div
+        className="col-12"
+      >
+        <h1>
+          Smart technology for people living with epilepsy
+        </h1>
+      </div>
+      <div
+        className="col-12"
+      >
+        <button>
+          Buy Now
+        </button>
+      </div>
+      <div
+        className="col-12"
+      >
+        <p>
+          Comes with a 30-day Free Trial Subscription
+        </p>
+      </div>
+    </div>
+    <div
+      className="row infoRow"
+    >
+      <div
+        className="col-md-6"
+      >
+        <img
+          alt="Embrace from Empatica"
+          src="embrace_logo.svg"
+        />
+        <h2>
+          Your companion for epilepsy management
+        </h2>
+        <p>
+          The Embrace watch uses advanced learning algorithms to identify tonic-clonic seizures and send alerts to caregivers. It also provides sleep, rest, and physical activity analysis.
+        </p>
+        <button>
+          Discover Embrace Features
+        </button>
+      </div>
+      <div
+        className="col-md-6"
+      >
+        <img
+          alt="Empatica's Embrace watch"
+          src="embrace_front-xhdpi.jpg"
+        />
+      </div>
+    </div>
+    <div
+      className="row footerRow"
+    >
+      <div
+        className="col-md"
+      >
+        <Connect(LinkComponent)
+          href="/login"
+        >
+          Login
+        </Connect(LinkComponent)>
+      </div>
+      <div
+        className="col"
+      >
+        <Connect(LinkComponent)
+          href="#"
+        >
+          Company
+        </Connect(LinkComponent)>
+      </div>
+      <div
+        className="col"
+      >
+        <Connect(LinkComponent)
+          href="#"
+        >
+          Careers
+        </Connect(LinkComponent)>
+      </div>
+    </div>
+    <div
+      className="row footerRow"
+    >
+      <div
+        className="col"
+      >
+        <p>
+          © 2017 Empatica Inc. - ISO 13485 Cert. No. 9124.EPTC - All rights reserved 
+        </p>
+      </div>
+    </div>
+  </div>
 </div>
 `;
