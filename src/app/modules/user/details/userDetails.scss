@@ -1,0 +1,28 @@
+@import '../../../../common';
+
+.userDetails {
+  width: 100%;
+  min-height: 100vh;
+  height: 100%;
+  background-color: $EMP-light-grey;
+  background-image: linear-gradient(-70deg, $EMP-black, $EMP-light-grey);
+
+  .row {
+    width: 90%;
+    margin: 0 5%;
+  }
+}
+
+div.welcomeCard {
+  border-color: $EMP-red;
+  border-radius: 10px;
+  border-width: 5px;
+  background-color: $EMP-white;
+  margin: 10px 0;
+  padding: 2%;
+
+  h2 {
+    color: $EMP-red;
+  }
+
+}

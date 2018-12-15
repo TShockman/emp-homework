@@ -65,7 +65,7 @@ var orders = {
   }
 };
 
-var userOrders = { orders: [orders[1], orders[2]] };
+var userOrders = { orders: [orders[1], orders[2], orders[1], orders[2]] };
 
 app.get("/info", function(req, res) {
   res.json({

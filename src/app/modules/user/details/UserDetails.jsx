@@ -1,8 +1,9 @@
 import React, {PureComponent} from 'react';
 import PropTypes from 'prop-types';
-import {Card} from 'reactstrap';
 import Loading from '../../common/loading/Loading';
 import OrderList from '../../order/orderList';
+import style from './userDetails.scss';
+import cx from 'classnames';
 
 export default class UserDetails extends PureComponent {
   static propTypes = {
@@ -39,13 +40,17 @@ export default class UserDetails extends PureComponent {
 
     const {id, firstName, lastName, email} = this.props.user;
     return (
-        <Card>
-          <h3>{id}</h3>
-          <h3>{firstName}</h3>
-          <h3>{lastName}</h3>
-          <h3>{email}</h3>
+        <div className={cx("userDetails", "container-fluid")}>
+          <div className="row">
+            <div className="col">
+              <div className={cx("card", "welcomeCard")}>
+                <h1>Welcome {firstName} {lastName}!</h1>
+                <h2>{email}</h2>
+              </div>
+            </div>
+          </div>
           <OrderList/>
-        </Card>
+        </div>
     );
   }
 }

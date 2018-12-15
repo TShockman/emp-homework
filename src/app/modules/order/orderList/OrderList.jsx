@@ -1,7 +1,6 @@
 import React, {PureComponent} from 'react';
 import PropTypes from 'prop-types';
 import Loading from '../../common/loading';
-import {ListGroup, ListGroupItem} from 'reactstrap';
 import OrderPreview from '../orderPreview'
 
 export default class OrderList extends PureComponent {
@@ -29,9 +28,11 @@ export default class OrderList extends PureComponent {
     }
 
     return (
-        <ListGroup>
-          {orders.map(order => <ListGroupItem key={order.id}><OrderPreview order={order}/></ListGroupItem>)}
-        </ListGroup>
+        <div className="album">
+          <div className="row">
+          {orders.map(order => <div className="col-md-6" key={order.id}><OrderPreview order={order}/></div>)}
+          </div>
+        </div>
     );
   }
 }
