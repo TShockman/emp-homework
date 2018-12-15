@@ -9,8 +9,6 @@
     margin: 0;
     width: 100%;
     max-width: 100%;
-
-
   }
 
   .row {
@@ -21,8 +19,9 @@
   .titleRow {
     color: $EMP-white;
     height: 100vh;
-    padding-top: 320px;
-    padding-right: 40%;
+    padding-top: 30vh;
+    padding-bottom: 10vh;
+    padding-right: 20vw;
 
     // mobile default
     background: url('../../../assets/images/homepage_hero-sm-xhdpi.jpg') no-repeat center center fixed;
@@ -38,10 +37,12 @@
     button {
       background: transparent;
       color: $EMP-white;
+      font-weight: bold;
       border-color: $EMP-white;
       border-radius: 5px;
       border-width: 2px;
-      width: 350px;
+      height: 44px;
+      width: 190px;
       -webkit-transition-duration: 0.4s; /* Safari */
       transition-duration: 0.4s;
     }
@@ -56,12 +57,15 @@
   .infoRow {
     background: $EMP-white;
     width: 100%;
+    margin: 60px 0;
 
     button {
       background: $EMP-red;
       color: $EMP-white;
       border-radius: 5px;
       border-width: 2px;
+      width: 250px;
+      height: 44px;
       border-color: $EMP-red;
       -webkit-transition-duration: 0.4s; /* Safari */
       transition-duration: 0.4s;
@@ -72,16 +76,27 @@
       color: $EMP-red;
       cursor: pointer;
     }
+
+    img.watch {
+      margin: 0 100px;
+      width: 80%;
+      height: auto;
+    }
   }
 
   .footerRow {
     text-align: center;
     background: $EMP-light-grey;
     color: $EMP-dark-grey;
+    height: 80px;
 
     a {
       color: $EMP-dark-grey;
     }
+  }
+
+  .footerRow:last-child {
+    border-top: 1px solid $EMP-dark-grey;
   }
 }
 

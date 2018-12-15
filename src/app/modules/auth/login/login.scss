@@ -18,8 +18,12 @@
       .card {
         background-color: $EMP-white;
         padding: 15px;
-        width: 50%;
-
+        @media (max-width: $EMP-mobile-max) {
+          width: 90%
+        }
+        @media (min-width: $EMP-full-min) {
+          width: 50%;
+        }
         button {
           background: $EMP-red;
           color: $EMP-white;

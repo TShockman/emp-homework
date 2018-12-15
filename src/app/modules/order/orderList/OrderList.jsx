@@ -30,7 +30,7 @@ export default class OrderList extends PureComponent {
     return (
         <div className="album">
           <div className="row">
-          {orders.map(order => <div className="col-md-6" key={order.id}><OrderPreview order={order}/></div>)}
+          {orders.map(order => <div className="col-sm-6" key={order.id}><OrderPreview order={order}/></div>)}
           </div>
         </div>
     );
