@@ -47,8 +47,8 @@ export default class OrderPreview extends PureComponent {
 
     const items = (
         <ul className="list-group">
-          {order.items.map(item => (
-            <li className="list-group-item">
+          {order.items.map((item, k) => (
+            <li key={k} className="list-group-item">
               <span>{item.name} <small>({item.sku})</small> <b className="fr">${item.amount}</b></span>
             </li>
           ))}
@@ -61,7 +61,7 @@ export default class OrderPreview extends PureComponent {
             <h5>Discounts:</h5>
             <div>
               <ul className="list-group">
-                {order.discounts.map(discount => {
+                {order.discounts.map((discount, k) => {
                   let discountAmt;
                   switch (discount.type) {
                     case 'percent':
@@ -74,7 +74,7 @@ export default class OrderPreview extends PureComponent {
                       discountAmt = null;
                   }
                   return (
-                    <li className="list-group-item">
+                    <li key={k} className="list-group-item">
                       <span>{discount.name} {discountAmt}</span>
                     </li>
                   );

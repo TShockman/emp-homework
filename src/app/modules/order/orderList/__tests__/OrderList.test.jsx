@@ -46,8 +46,9 @@ describe('OrderList', () => {
     const comp = <OrderList {...props}/>;
     expect(props.push).not.toHaveBeenCalled();
 
-    mount(comp);
+    const wrapper = mount(comp);
     expect(props.push).toHaveBeenLastCalledWith("/login");
+    wrapper.unmount();
   });
   it('Fetches user orders on mount if user is logged in', () => {
     const props = {
@@ -59,7 +60,8 @@ describe('OrderList', () => {
     const comp = <OrderList {...props}/>;
     expect(props.requestUserOrders).not.toHaveBeenCalled();
 
-    mount(comp);
+    const wrapper = mount(comp);
     expect(props.requestUserOrders).toHaveBeenLastCalledWith({userId: 123});
+    wrapper.unmount();
   });
 });

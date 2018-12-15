@@ -3,48 +3,52 @@
 exports[`OrderList Consistently renders loading component when data has not arrived yet 1`] = `<Loading />`;
 
 exports[`OrderList Consistently renders with non-empty orders list 1`] = `
-<ListGroup
-  tag="ul"
+<div
+  className="album"
 >
-  <ListGroupItem
-    tag="li"
+  <div
+    className="row"
   >
-    <OrderPreview
-      order={
-        Object {
-          "id": 123,
-          "items": Array [
-            Object {
-              "amount": 120,
-              "name": "Test Product",
-              "sku": "123-123-123",
-            },
-          ],
-          "ref": "mockref123-456",
-          "status": "ok",
+    <div
+      className="col-md-6"
+    >
+      <OrderPreview
+        order={
+          Object {
+            "id": 123,
+            "items": Array [
+              Object {
+                "amount": 120,
+                "name": "Test Product",
+                "sku": "123-123-123",
+              },
+            ],
+            "ref": "mockref123-456",
+            "status": "ok",
+          }
         }
-      }
-    />
-  </ListGroupItem>
-  <ListGroupItem
-    tag="li"
-  >
-    <OrderPreview
-      order={
-        Object {
-          "id": 456,
-          "items": Array [
-            Object {
-              "amount": 120,
-              "name": "Test Product",
-              "sku": "123-123-123",
-            },
-          ],
-          "ref": "mockref908-765",
-          "status": "ok",
+      />
+    </div>
+    <div
+      className="col-md-6"
+    >
+      <OrderPreview
+        order={
+          Object {
+            "id": 456,
+            "items": Array [
+              Object {
+                "amount": 120,
+                "name": "Test Product",
+                "sku": "123-123-123",
+              },
+            ],
+            "ref": "mockref908-765",
+            "status": "ok",
+          }
         }
-      }
-    />
-  </ListGroupItem>
-</ListGroup>
+      />
+    </div>
+  </div>
+</div>
 `;

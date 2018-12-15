@@ -1,0 +1,10 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`UserDetailsContainer Consistently provides UserDetails with correct props 1`] = `
+<UserDetails
+  id={123}
+  push={[Function]}
+  requestUser={[Function]}
+  user="mock user state user"
+/>
+`;

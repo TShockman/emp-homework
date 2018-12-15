@@ -1,7 +1,157 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`OrderPreview Renders consistently with full information 1`] = `
-<div>
-  mockref-asdf1245
+<div
+  className="card orderPreview"
+>
+  <div
+    className="card-header"
+  >
+    <h3
+      className="card-title"
+    >
+      Order 
+      mockref-asdf1245
+    </h3>
+    <h4
+      className="card-subtitle"
+    >
+      Status: 
+      OK
+    </h4>
+  </div>
+  <div
+    className="card-body"
+  >
+    <div>
+      <h5>
+        Items:
+      </h5>
+      <div>
+        <ul
+          className="list-group"
+        >
+          <li
+            className="list-group-item"
+          >
+            <span>
+              Test Product
+               
+              <small>
+                (
+                123-123-123
+                )
+              </small>
+               
+              <b
+                className="fr"
+              >
+                $
+                115
+              </b>
+            </span>
+          </li>
+          <li
+            className="list-group-item"
+          >
+            <span>
+              Test Product Two
+               
+              <small>
+                (
+                456-456-456
+                )
+              </small>
+               
+              <b
+                className="fr"
+              >
+                $
+                79
+              </b>
+            </span>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div>
+      <h5>
+        Discounts:
+      </h5>
+      <div>
+        <ul
+          className="list-group"
+        >
+          <li
+            className="list-group-item"
+          >
+            <span>
+              Mock Family & Friends
+               
+            </span>
+          </li>
+          <li
+            className="list-group-item"
+          >
+            <span>
+              Christmas
+               
+              <b
+                className="fr"
+              >
+                (-$
+                10
+                )
+              </b>
+            </span>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div>
+      <h5>
+        Tracking:
+      </h5>
+      <div>
+        <ul
+          className="list-group"
+        >
+          <li
+            className="list-group-item"
+          >
+            Carrier: 
+            <span
+              className="fr"
+            >
+              USPS
+            </span>
+          </li>
+          <li
+            className="list-group-item"
+          >
+            Tracking Code: 
+            <span
+              className="fr"
+            >
+              123412353453254324
+            </span>
+          </li>
+          <li
+            className="list-group-item"
+          >
+            Status: 
+            <span
+              className="fr"
+            >
+              IN_TRANSIT
+            </span>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <button>
+      View/Edit Order
+    </button>
+  </div>
 </div>
 `;

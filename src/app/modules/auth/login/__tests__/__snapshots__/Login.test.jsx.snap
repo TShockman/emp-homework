@@ -1,72 +1,82 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Login Renders consistently 1`] = `
-<Card
-  tag="div"
+<div
+  className="container-fluid login"
 >
-  <Form
-    tag="form"
+  <div
+    className="row"
   >
-    <FormGroup
-      tag="div"
+    <div
+      className="col"
     >
-      <Label
-        for="username"
-        tag="label"
-        widths={
-          Array [
-            "xs",
-            "sm",
-            "md",
-            "lg",
-            "xl",
-          ]
-        }
+      <form
+        className="card"
+        onSubmit={[Function]}
       >
-        Username
-      </Label>
-      <Input
-        id="username"
-        name="username"
-        onChange={[Function]}
-        placeholder="Jane_Doe"
-        type="text"
-      />
-    </FormGroup>
-    <FormGroup
-      tag="div"
+        <h2>
+          Login
+        </h2>
+        <div
+          className="form-group"
+        >
+          <label
+            htmlFor="username"
+          >
+            Username
+          </label>
+          <input
+            className="form-control"
+            id="username"
+            name="username"
+            onChange={[Function]}
+            placeholder="Jane_Doe"
+          />
+        </div>
+        <div
+          className="form-group"
+        >
+          <label
+            htmlFor="password"
+          >
+            Password
+          </label>
+          <input
+            className="form-control"
+            id="password"
+            name="password"
+            onChange={[Function]}
+            placeholder="***********"
+            type="password"
+          />
+        </div>
+        <button
+          type="submit"
+        >
+          Login
+        </button>
+      </form>
+    </div>
+  </div>
+  <div
+    className="row"
+  >
+    <div
+      className="col"
     >
-      <Label
-        for="password"
-        tag="label"
-        widths={
-          Array [
-            "xs",
-            "sm",
-            "md",
-            "lg",
-            "xl",
-          ]
-        }
+      <div
+        className="card"
       >
-        Password
-      </Label>
-      <Input
-        id="password"
-        name="password"
-        onChange={[Function]}
-        placeholder="***********"
-        type="password"
-      />
-    </FormGroup>
-    <Button
-      className="btn btn-primary"
-      color="secondary"
-      onClick={[Function]}
-      tag="button"
-    >
-      Login
-    </Button>
-  </Form>
-</Card>
+        <span>
+          Don't have an account? 
+          <a
+            href="#"
+          >
+            Sign Up
+          </a>
+        </span>
+      </div>
+    </div>
+  </div>
+</div>
 `;

@@ -1,7 +1,7 @@
 import {Record} from 'immutable';
-import {USER_FULFILLED, USER_ORDERS_FULFILLED} from './actions';
+import {USER_FULFILLED} from './actions';
 
-const UserState = Record({
+export const UserState = Record({
   user: null
 });
 

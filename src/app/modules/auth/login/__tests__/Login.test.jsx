@@ -42,10 +42,13 @@ describe('Login', () => {
     wrapper.instance().setState({username: 'jondo', password: '12345'});
 
     const mockEvent = {
-      stopPropagation: jest.fn()
+      stopPropagation: jest.fn(),
+      preventDefault: jest.fn(),
     };
     wrapper.instance().handleSubmit(mockEvent);
     expect(mockEvent.stopPropagation).toHaveBeenCalledTimes(1);
+    expect(mockEvent.preventDefault).toHaveBeenCalledTimes(1);
     expect(props.requestLogin).toHaveBeenCalledWith({username: 'jondo', password: '12345'});
+    wrapper.unmount();
   });
 });

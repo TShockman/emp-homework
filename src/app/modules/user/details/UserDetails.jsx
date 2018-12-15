@@ -25,8 +25,7 @@ export default class UserDetails extends PureComponent {
     if (id === null) {
       return push('/login');
     } else if (id.toString() !== routeId) {
-      console.log('Can only view user logged in.');
-      // TODO: handle this differently?
+      // naive privileges check: all users only can view their own page
       return push(`/user/${id}`);
     } else {
       return requestUser({id: router.params.id});
@@ -38,7 +37,7 @@ export default class UserDetails extends PureComponent {
       return <Loading/>;
     }
 
-    const {id, firstName, lastName, email} = this.props.user;
+    const {firstName, lastName, email} = this.props.user;
     return (
         <div className={cx("userDetails", "container-fluid")}>
           <div className="row">

@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`User Details Renders consistently with user 1`] = `
+<div
+  className="userDetails container-fluid"
+>
+  <div
+    className="row"
+  >
+    <div
+      className="col"
+    >
+      <div
+        className="card welcomeCard"
+      >
+        <h1>
+          Welcome 
+          Bob
+           
+          Jones
+          !
+        </h1>
+        <h2>
+          bob.jones.1@mail.net
+        </h2>
+      </div>
+    </div>
+  </div>
+  <Connect(OrderList) />
+</div>
+`;
+
+exports[`User Details Renders loading without user 1`] = `<Loading />`;

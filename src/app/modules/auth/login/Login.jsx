@@ -64,7 +64,7 @@ export default class Login extends Component{
           <div className="row">
             <div className="col">
               <div className="card">
-                <span>Don't have an account? <Link href="#">Sign Up</Link></span>
+                <span>Don't have an account? <a href="#">Sign Up</a></span>
               </div>
             </div>
           </div>
