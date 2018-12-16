@@ -1,0 +1,14 @@
+@import '../../../../common.scss';
+
+.notFound {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $EMP-light-grey;
+  min-width: 100vw;
+  min-height: 100vh;
+
+  h1 {
+    color: $EMP-red;
+  }
+}

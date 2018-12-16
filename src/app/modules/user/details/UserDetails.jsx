@@ -33,19 +33,24 @@ export default class UserDetails extends PureComponent {
   };
 
   render() {
+    let contents;
     if (!this.props.user) {
-      return <Loading/>;
+      contents = <Loading/>;
+    } else {
+      const {firstName, lastName, email} = this.props.user;
+      contents = (
+          <div className={cx("card", "welcomeCard")}>
+            <h1>Welcome {firstName} {lastName}!</h1>
+            <h2>{email}</h2>
+          </div>
+      );
     }
 
-    const {firstName, lastName, email} = this.props.user;
     return (
         <div className={cx("userDetails", "container-fluid")}>
           <div className="row">
             <div className="col">
-              <div className={cx("card", "welcomeCard")}>
-                <h1>Welcome {firstName} {lastName}!</h1>
-                <h2>{email}</h2>
-              </div>
+              {contents}
             </div>
           </div>
           <OrderList/>

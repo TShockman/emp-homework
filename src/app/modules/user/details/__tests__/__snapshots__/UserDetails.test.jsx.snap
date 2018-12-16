@@ -30,4 +30,19 @@ exports[`User Details Renders consistently with user 1`] = `
 </div>
 `;
 
-exports[`User Details Renders loading without user 1`] = `<Loading />`;
+exports[`User Details Renders loading without user 1`] = `
+<div
+  className="userDetails container-fluid"
+>
+  <div
+    className="row"
+  >
+    <div
+      className="col"
+    >
+      <Loading />
+    </div>
+  </div>
+  <Connect(OrderList) />
+</div>
+`;

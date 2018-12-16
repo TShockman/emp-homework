@@ -1,7 +1,11 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Loading Renders consistently 1`] = `
-<div>
-  Loading . . .
+<div
+  className="loading"
+>
+  <div
+    className="loader"
+  />
 </div>
 `;

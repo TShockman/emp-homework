@@ -1,13 +1,17 @@
+// sass file containing commonly used definitions to be imported
+
+// fallback fonts
 $fallback-fonts: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
 "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
 sans-serif;
 
+// EMPATICA colors
 $EMP-white: #FFF;
 $EMP-red: #BC204B;
 $EMP-black: #333;
 $EMP-light-grey: #EDEFF0;
 $EMP-dark-grey: #707070;
 
-// TODO: add more breakpoints
+// mobile/desktop breakpoints
 $EMP-mobile-max: 767px;
 $EMP-full-min: 768px;
