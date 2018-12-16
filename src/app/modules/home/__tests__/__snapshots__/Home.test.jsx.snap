@@ -8,64 +8,78 @@ exports[`Home Renders consistently 1`] = `
     className="container"
   >
     <div
-      className="row titleRow"
+      className="titleArea"
     >
       <div
-        className="col-12"
+        className="titleContent"
       >
-        <h1>
-          Smart technology for people living with epilepsy
-        </h1>
-      </div>
-      <div
-        className="col-12"
-      >
-        <button>
-          Buy Now
-        </button>
-      </div>
-      <div
-        className="col-12"
-      >
-        <p>
-          Comes with a 30-day Free Trial Subscription
-        </p>
+        <div>
+          <h1>
+            Smart technology for people living with epilepsy
+          </h1>
+        </div>
+        <div>
+          <button>
+            Buy Now
+          </button>
+        </div>
+        <div>
+          <p>
+            Comes with a 30-day Free Trial Subscription
+          </p>
+        </div>
       </div>
     </div>
     <div
-      className="row infoRow"
+      className="row infoRow justify-content-center align-items-center"
     >
       <div
-        className="col-md-6"
+        className="col-md-4"
       >
-        <img
-          alt="Embrace from Empatica"
-          src="embrace_logo.svg"
-        />
+        <Media
+          defaultMatches={true}
+          query="(max-width: 767px)"
+        >
+          [Function]
+        </Media>
+        <br />
+        <br />
         <h2>
           Your companion for epilepsy management
         </h2>
+        <br />
         <p>
           The Embrace watch uses advanced learning algorithms to identify tonic-clonic seizures and send alerts to caregivers. It also provides sleep, rest, and physical activity analysis.
         </p>
-        <button>
-          Discover Embrace Features
-        </button>
+        <br />
+        <Media
+          defaultMatches={true}
+          query="(min-width: 768px)"
+        >
+          [Function]
+        </Media>
       </div>
       <div
-        className="col-md-6"
+        className="col-md-4"
       >
         <img
           alt="Empatica's Embrace watch"
+          className="watch"
           src="embrace_front-xhdpi.jpg"
         />
+        <Media
+          defaultMatches={true}
+          query="(max-width: 767px)"
+        >
+          [Function]
+        </Media>
       </div>
     </div>
     <div
-      className="row footerRow"
+      className="row footerRow align-items-center"
     >
       <div
-        className="col-md"
+        className="col-4"
       >
         <Connect(LinkComponent)
           href="/login"
@@ -74,7 +88,7 @@ exports[`Home Renders consistently 1`] = `
         </Connect(LinkComponent)>
       </div>
       <div
-        className="col"
+        className="col-4"
       >
         <Connect(LinkComponent)
           href="#"
@@ -83,7 +97,7 @@ exports[`Home Renders consistently 1`] = `
         </Connect(LinkComponent)>
       </div>
       <div
-        className="col"
+        className="col-4"
       >
         <Connect(LinkComponent)
           href="#"
@@ -93,7 +107,7 @@ exports[`Home Renders consistently 1`] = `
       </div>
     </div>
     <div
-      className="row footerRow"
+      className="row footerRow align-items-center"
     >
       <div
         className="col"

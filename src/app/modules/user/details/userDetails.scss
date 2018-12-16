@@ -7,10 +7,12 @@
   background-color: $EMP-light-grey;
   background-image: linear-gradient(-70deg, $EMP-black, $EMP-light-grey);
 
-  .row {
-    width: 90%;
-    margin: 0 5%;
-  }
+    @media (min-width: $EMP-full-min) {
+      .row {
+        width: 90%;
+        margin: 0 5%;
+      }
+    }
 }
 
 div.welcomeCard {

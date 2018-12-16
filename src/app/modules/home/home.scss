@@ -4,6 +4,60 @@
   background: transparent;
   width: 100%;
 
+  // mobile specific
+  @media (max-width: $EMP-mobile-max) {
+    text-align: center;
+
+    .titleArea {
+      background: url('../../../assets/images/homepage_hero-sm-xhdpi.jpg') no-repeat center center fixed;
+      justify-content: center;
+      padding-bottom: 2vh;
+
+      .titleContent {
+        width: 90%;
+        div {
+          margin: 30px 0;
+        }
+      }
+    }
+
+    .infoRow {
+      img.watch {
+        width: 90%;
+        height: auto;
+        margin-bottom: 50px;
+      }
+    }
+  }
+
+  // desktop specific
+  @media (min-width: $EMP-full-min) {
+    text-align: left;
+
+    .titleArea {
+      background-image: url('../../../assets/images/homepage_hero-lg-xhdpi.jpg');
+      justify-content: flex-start;
+      padding-bottom: 10vh;
+
+      .titleContent {
+        margin-left: 12%;
+        width: 50%;
+        div {
+          margin: 22px 0;
+        }
+      }
+    }
+
+    .infoRow {
+      img.watch {
+        margin-left: 17%;
+        width: 90%;
+        height: auto;
+      }
+    }
+
+  }
+
   .container {
     padding: 0;
     margin: 0;
@@ -11,28 +65,18 @@
     max-width: 100%;
   }
 
-  .row {
-    margin: 0;
-    width: 100%;
-  }
-
-  .titleRow {
+  .titleArea {
     color: $EMP-white;
     height: 100vh;
-    padding-top: 30vh;
-    padding-bottom: 10vh;
-    padding-right: 20vw;
+    display: flex;
+    align-items: flex-end;
 
     // mobile default
-    background: url('../../../assets/images/homepage_hero-sm-xhdpi.jpg') no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-
-    @media (min-width: $EMP-full-min) {
-      background-image: url('../../../assets/images/homepage_hero-lg-xhdpi.jpg');
-    }
+    background-position: center;
 
     button {
       background: transparent;
@@ -41,7 +85,7 @@
       border-color: $EMP-white;
       border-radius: 5px;
       border-width: 2px;
-      height: 44px;
+      height: 50px;
       width: 190px;
       -webkit-transition-duration: 0.4s; /* Safari */
       transition-duration: 0.4s;
@@ -65,7 +109,7 @@
       border-radius: 5px;
       border-width: 2px;
       width: 250px;
-      height: 44px;
+      height: 50px;
       border-color: $EMP-red;
       -webkit-transition-duration: 0.4s; /* Safari */
       transition-duration: 0.4s;
@@ -76,12 +120,6 @@
       color: $EMP-red;
       cursor: pointer;
     }
-
-    img.watch {
-      margin: 0 100px;
-      width: 80%;
-      height: auto;
-    }
   }
 
   .footerRow {
@@ -89,9 +127,14 @@
     background: $EMP-light-grey;
     color: $EMP-dark-grey;
     height: 80px;
+    margin: 0;
 
     a {
       color: $EMP-dark-grey;
+    }
+
+    p {
+      margin: 0;
     }
   }
 
