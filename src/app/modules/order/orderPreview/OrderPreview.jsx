@@ -3,6 +3,8 @@ import PropTypes from 'prop-types';
 import cx from 'classnames';
 import style from './orderPreview.scss';
 
+// Component to preview a single order, most useful
+// as an item in the OrderList but not tightly coupled.
 export default class OrderPreview extends PureComponent {
   static propTypes = {
     order: PropTypes.shape({
@@ -30,6 +32,7 @@ export default class OrderPreview extends PureComponent {
   render() {
     const {order} = this.props;
 
+    // build tracking section
     let tracking;
     if (order.tracking) {
       tracking = (
@@ -45,6 +48,7 @@ export default class OrderPreview extends PureComponent {
           </ul>);
     }
 
+    // build items section
     const items = (
         <ul className="list-group">
           {order.items.map((item, k) => (
@@ -54,6 +58,7 @@ export default class OrderPreview extends PureComponent {
           ))}
         </ul>);
 
+    // build discounts section
     let discounts = null;
     if (order.discounts) {
       discounts = (

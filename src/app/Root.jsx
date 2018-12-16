@@ -27,8 +27,8 @@ function mapStateToProps({router}) {
 const RoutingContainer = connect(mapStateToProps, {})(Routing);
 
 
-// Provide the store for the rest of the app. Let Routing handle deciding
-// which specific component to render.
+// Provide the store for the rest of the app. Let Containerized
+// Routing handle deciding which specific component to render.
 export default class Root extends Component {
   static propTypes = {
     store: PropTypes.object.isRequired

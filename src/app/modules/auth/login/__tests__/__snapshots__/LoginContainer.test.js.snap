@@ -3,6 +3,7 @@
 exports[`LoginContainer Provides Login with correct props 1`] = `
 <Login
   id={123}
+  push={[Function]}
   requestLogin={[Function]}
 />
 `;

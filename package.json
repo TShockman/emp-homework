@@ -19,7 +19,6 @@
     "react-media": "^1.9.2",
     "react-redux": "^6.0.0",
     "react-scripts": "2.1.1",
-    "reactstrap": "^6.5.0",
     "redux": "^4.0.1",
     "redux-little-router": "^15.1.2",
     "redux-saga": "^0.16.2",

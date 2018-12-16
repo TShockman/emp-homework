@@ -8,6 +8,8 @@ import embraceLogo from '../../../assets/images/embrace_logo.svg';
 import embraceLogoSm from '../../../assets/images/embrace_logo-sm.svg';
 import embraceFrontXHDPI from '../../../assets/images/embrace_front-xhdpi.jpg';
 
+// Homepage Component, is fully connected by './HomeContainer.js', should
+// be imported from './index.js'
 export default class Home extends PureComponent{
   static propTypes = {};
 

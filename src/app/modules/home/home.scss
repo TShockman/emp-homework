@@ -4,7 +4,7 @@
   background: transparent;
   width: 100%;
 
-  // mobile specific
+  // mobile specific styling
   @media (max-width: $EMP-mobile-max) {
     text-align: center;
 
@@ -30,7 +30,7 @@
     }
   }
 
-  // desktop specific
+  // desktop specific styling
   @media (min-width: $EMP-full-min) {
     text-align: left;
 
@@ -55,7 +55,6 @@
         height: auto;
       }
     }
-
   }
 
   .container {

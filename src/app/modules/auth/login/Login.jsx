@@ -1,35 +1,44 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
-import {Link} from 'redux-little-router';
 import style from './login.scss';
 
+// Login Component used to display the login form and handle
+// authorization flow. Intended to be imported from './index.js',
+// fully connected with redux
 export default class Login extends Component{
   static propTypes = {
     requestLogin: PropTypes.func.isRequired,
-    id: PropTypes.number
+    id: PropTypes.number,
+    push: PropTypes.func.isRequired
   };
 
   constructor() {
     super();
+    // exception to redux being the single source of truth
+    // work-in-progress data is inherently volatile, so it's
+    // okay to store it locally in the component state
     this.state = {
       username: '',
       password: ''
     };
   }
 
+  // whenever the form updates, update the volatile state
   handleFormUpdate = event => {
     event.stopPropagation();
     const {target} = event;
     this.setState({[target.id]: target.value});
   };
 
+  // on submit, prevent default handling of the event
+  // then dispatch a requestLogin action for the input
+  // username and password
   handleSubmit = event => {
     event.stopPropagation();
     event.preventDefault();
     const {requestLogin} = this.props;
     const {username, password} = this.state;
-
     requestLogin({
       username,
       password
@@ -37,12 +46,6 @@ export default class Login extends Component{
   };
 
   render() {
-    const {id} = this.props;
-    if (id !== null) {
-      // TODO
-      console.log("Will need to redirect to the proper location here.")
-    }
-
     return (
         <div className={cx("container-fluid", "login")}>
           <div className="row">

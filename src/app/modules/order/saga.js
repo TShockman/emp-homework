@@ -1,4 +1,4 @@
-import {all, fork, select, call, put, takeEvery, getContext} from 'redux-saga/effects';
+import {all, fork, call, put, takeEvery} from 'redux-saga/effects';
 import {GET_ORDERS_REQUESTED, GET_ORDERS_FULFILLED} from './actions';
 
 import EmpaticaService from '../../services/EmpaticaService';
@@ -9,13 +9,14 @@ export const empaticaService = EmpaticaService.instance;
 export function * retrieveUserOrders({userId}) {
   const ordersResult = yield call(empaticaService.getUserOrders, userId);
 
+  // Please see auth saga for discussion of how I would handle errors
+  // in situations where they may actually occur.
   if (!ordersResult) {
-    console.log("Error getting orders.");
     yield call(alert, "Orders Get Failure.");
-    // TODO
     return;
   }
 
+  // dispatch a fulfilled action on success
   yield put({type: GET_ORDERS_FULFILLED, orders: ordersResult.orders, userId});
 }
 

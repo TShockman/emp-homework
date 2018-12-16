@@ -8,7 +8,6 @@
   padding-top: 25vh;
 
   .row {
-
     .col {
       display: flex;
       align-items: center;
@@ -18,12 +17,17 @@
       .card {
         background-color: $EMP-white;
         padding: 15px;
+
+        // use full screen width if mobile
         @media (max-width: $EMP-mobile-max) {
           width: 90%
         }
+
+        // keep it reasonably sized if desktop
         @media (min-width: $EMP-full-min) {
           width: 50%;
         }
+
         button {
           background: $EMP-red;
           color: $EMP-white;

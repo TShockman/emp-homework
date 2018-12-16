@@ -9,14 +9,16 @@ describe('Login', () => {
   it('Renders consistently', () => {
     const props = {
       requestLogin: jest.fn(),
-      id: null
+      id: null,
+      push: jest.fn()
     };
     expect(renderer.render(<Login {...props}/>)).toMatchSnapshot();
   });
   it('Updates volatile state on form update', () => {
     const props = {
       requestLogin: jest.fn(),
-      id: null
+      id: null,
+      push: jest.fn()
     };
     const wrapper = mount(<Login {...props}/>);
     expect(wrapper.state().username).toBe('');
@@ -36,7 +38,8 @@ describe('Login', () => {
   it('Requests login on form submission', () => {
     const props = {
       requestLogin: jest.fn(),
-      id: null
+      id: null,
+      push: jest.fn()
     };
     const wrapper = mount(<Login {...props}/>);
     wrapper.instance().setState({username: 'jondo', password: '12345'});

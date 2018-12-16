@@ -9,13 +9,13 @@ export const empaticaService = EmpaticaService.instance;
 export function * retrieveUser({id}) {
   const userResult = yield call(empaticaService.getUser, id);
 
+  // Please see auth saga for discussion of proper saga error handling.
   if (!userResult) {
-    console.log("Error getting user.");
     yield call(alert, "User Get Failure.");
-    // TODO
     return;
   }
 
+  // if successfully retrieved user, dispatch an action with the result
   yield put({type: USER_FULFILLED, user: userResult});
 }
 

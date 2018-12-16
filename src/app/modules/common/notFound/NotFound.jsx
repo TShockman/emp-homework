@@ -1,6 +1,8 @@
 import React, {PureComponent} from 'react';
 import style from './notFound.scss';
 
+// Common component to render a 404 Not Found page if user navigates
+// to an unsupported page
 export default class NotFound extends PureComponent {
 
   render() {

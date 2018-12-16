@@ -1,11 +1,13 @@
 import {connect} from 'react-redux';
 import OrderList from './OrderList';
-import {selectUserState} from '../../user/selectors';
 import {GET_ORDERS_REQUESTED} from '../actions';
 import {selectAuthState} from '../../auth/selectors';
 import {push} from 'redux-little-router';
 import {selectUserOrders} from '../selectors';
 
+// Get authorization info and orders from the store
+// Please see the OrderList component for a discussion on
+// alternatives to selecting orders here.
 function mapStateToProps(state) {
   const {id} = selectAuthState(state);
   const orders = selectUserOrders(state, id);
