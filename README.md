@@ -1,4 +1,5 @@
 # Thomas Shockman Empatica Homework
+Coding project for interview process.
 
 To get it up and running:
 1. ``cd server/express``
